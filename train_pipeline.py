@@ -3,6 +3,9 @@ from src.train import train_model, evaluate_model, save_model
 from sklearn.model_selection import cross_val_score
 from sklearn.ensemble import RandomForestRegressor
 import joblib
+import os
+
+os.makedirs("models", exist_ok=True)
 
 df = load_data("data/car.csv")
 
